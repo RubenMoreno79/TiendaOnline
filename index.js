@@ -5,6 +5,9 @@ const app = require('./src/app');
 // Config .env
 require('dotenv').config();
 
+//Confi DB
+require('./src/config/db');
+
 // Creación server
 const server = http.createServer(app);
 
@@ -18,4 +21,4 @@ server.on('listening', () => {
 
 server.on('error', (error) => {
     console.log(error);
-})
+});

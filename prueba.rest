@@ -1,0 +1,65 @@
+
+GET http://localhost:3000/api/products
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MTNhMTNiOTkyNzM0MDNhN2U4OWNiMiIsInJvbCI6InJlZ3VsYXIiLCJpYXQiOjE3MTI1NzYyNTl9.YLKUoCMSDHLQSjAJ9J_6HYsgki4gOtmMjhjHGrWiqpg
+
+###
+GET http://localhost:3000/api/products/price/10/max/100
+
+###
+POST http://127.0.0.1:3000/api/products
+Content-Type: application/json
+
+{ 
+    "name": "Producto prueba", 
+    "description": "Esto es una prueba estupenda", 
+    "price": 120, 
+    "department": "test", 
+    "available": true, 
+    "stock": 30 
+}
+
+###
+PUT http://127.0.0.1:3000/api/products/add_cart
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MTNhMTNiOTkyNzM0MDNhN2U4OWNiMiIsInJvbCI6InJlZ3VsYXIiLCJpYXQiOjE3MTI1NzYyNTl9.YLKUoCMSDHLQSjAJ9J_6HYsgki4gOtmMjhjHGrWiqpg
+
+{
+    "product_id": "6565d2d08c270fdedef39563"
+}
+
+###
+GET http://127.0.0.1:3000/api/products/active
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MTNhMTNiOTkyNzM0MDNhN2U4OWNiMiIsInJvbCI6InJlZ3VsYXIiLCJpYXQiOjE3MTI1NzYyNTl9.YLKUoCMSDHLQSjAJ9J_6HYsgki4gOtmMjhjHGrWiqpg
+
+{
+    "product_id": "6565d2d08c270fdedef39563"
+}
+
+
+
+
+
+###
+POST http://localhost:3000/api/users/register
+Content-Type: application/json
+
+{
+    "name": "Farruquito",
+    "email": "farru@gmail.com",
+    "password": "12345"
+}
+
+###
+POST http://localhost:3000/api/users/login
+Content-Type: application/json
+
+{
+    "email": "farru@gmail.com",
+    "password": "12345"
+}
+
+###
+GET http://localhost:3000/api/users/profile
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MTNhMTNiOTkyNzM0MDNhN2U4OWNiMiIsInJvbCI6InJlZ3VsYXIiLCJpYXQiOjE3MTI1NzcyNTd9.-QupHQoHWdI-UJNJANt-Bt4xaHrrHBnB1Krz_3EiBSg
+
