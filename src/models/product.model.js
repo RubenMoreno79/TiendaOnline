@@ -7,7 +7,8 @@ const productSchema = new Schema({
     price: Number,
     department: String,
     available: Boolean,
-    stock: Number
+    stock: Number,
+    creator: { type: Schema.Types.ObjectId, ref: 'user' }
 }, {
     versionKey: false,
     timestamps: true

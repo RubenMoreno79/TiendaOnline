@@ -8,14 +8,15 @@ GET http://localhost:3000/api/products/price/10/max/100
 ###
 POST http://127.0.0.1:3000/api/products
 Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MTRmN2I4ZDZmMDQzYzQzZjcxMzI4OSIsInJvbCI6InJlZ3VsYXIiLCJpYXQiOjE3MTI2NTAxOTh9.xQz4KPfwQLANCMAyHxKeckgvdwizevU9TIzJXT0Ardg
 
 { 
-    "name": "Producto prueba", 
-    "description": "Esto es una prueba estupenda", 
+    "name": "Cuchillos2", 
+    "description": "Cortan que te cagas2", 
     "price": 120, 
-    "department": "test", 
+    "department": "Hogar", 
     "available": true, 
-    "stock": 30 
+    "stock": 30
 }
 
 ###
@@ -28,7 +29,7 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MTNhMTNiOTkyNzM0
 }
 
 ###
-GET http://127.0.0.1:3000/api/products/active
+GET http://127.0.0.1:3000/api/products/
 Content-Type: application/json
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MTNhMTNiOTkyNzM0MDNhN2U4OWNiMiIsInJvbCI6InJlZ3VsYXIiLCJpYXQiOjE3MTI1NzYyNTl9.YLKUoCMSDHLQSjAJ9J_6HYsgki4gOtmMjhjHGrWiqpg
 
@@ -37,16 +38,13 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MTNhMTNiOTkyNzM0
 }
 
 
-
-
-
 ###
-POST http://localhost:3000/api/users/register
+POST https://tiendaonline-30l9.onrender.com/api/users/register
 Content-Type: application/json
 
 {
-    "name": "Farruquito",
-    "email": "farru@gmail.com",
+    "name": "Hermano Farruquito",
+    "email": "Hermanofarru@gmail.com",
     "password": "12345"
 }
 
@@ -55,11 +53,15 @@ POST http://localhost:3000/api/users/login
 Content-Type: application/json
 
 {
-    "email": "farru@gmail.com",
+    "email": "Hermanofarru@gmail.com",
     "password": "12345"
 }
 
 ###
 GET http://localhost:3000/api/users/profile
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MTNhMTNiOTkyNzM0MDNhN2U4OWNiMiIsInJvbCI6InJlZ3VsYXIiLCJpYXQiOjE3MTI1NzcyNTd9.-QupHQoHWdI-UJNJANt-Bt4xaHrrHBnB1Krz_3EiBSg
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MTRmN2I4ZDZmMDQzYzQzZjcxMzI4OSIsInJvbCI6InJlZ3VsYXIiLCJpYXQiOjE3MTI2NTIxNTV9.uPxOtTbvAp6TsnkdO1GvdjOXRuTCx8xWnuhB116bd38
+
+###
+GET http://localhost:3000/api/users/products
+Authorization:  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MTRmN2I4ZDZmMDQzYzQzZjcxMzI4OSIsInJvbCI6InJlZ3VsYXIiLCJpYXQiOjE3MTI2NTIxNTV9.uPxOtTbvAp6TsnkdO1GvdjOXRuTCx8xWnuhB116bd38
 

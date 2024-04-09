@@ -43,11 +43,15 @@ router.get('/price/:minPrice/max/:maxPrice', async (req, res) => {
 });
 
 
-
 router.post('/', validate(productSchema), async (req, res) => {
     //req.body: name, description, price, department, available, stock
+    //Modificamos el body para incluir el ID del creador
+    req.body.creator = req.user._id
+    //Creamos el nuevo producto
     const newProduct = await Product.create(req.body);
-    res.json(newProduct);
+    //Recuperar el nuevo producto creado a partir de su ID
+    const product = await Product.findById(newProduct._id).populate('creator');
+    res.json(product);
 });
 
 router.put('/add_cart', checkProductId, async (req, res) => {

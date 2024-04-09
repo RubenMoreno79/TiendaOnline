@@ -82,3 +82,10 @@
 
    - GET /api/products/activos
    - Recupera todos los productos cuya propiedad available sea true y además tengan más de 10 productos en stock
+
+  # Recuperar todos los productos creados por el usuario que ha hecho login
+
+  - GET /api/users/products
+  - Respuesta: Un array de productos
+  -  Headers: Autorization => TOKEN
+  
